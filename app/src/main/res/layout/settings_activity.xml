@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+    <!-- ****************************
+      *** Advanced Search Options ***
+      *************************** -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Advanced Search Options"
+        android:id="@+id/tvHeading"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="35dp"/>
+    <!-- ***************
+      *** Image Size ***
+      ****************** -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image Size"
+        android:id="@+id/tvImageSize"
+        android:layout_below="@+id/tvHeading"
+        android:layout_alignLeft="@+id/tvHeading"
+        android:layout_marginTop="20dp" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spImageSize"
+        android:layout_below="@+id/tvHeading"
+        android:layout_toRightOf="@+id/tvImageSize"
+        android:layout_toEndOf="@+id/tvImageSize"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/tvImageSize"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="20dp"
+        android:spinnerMode="dropdown"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/ImageSizeOptions" />
+    <!-- *****************
+      *** Color Filter ***
+      ****************** -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Filter"
+        android:id="@+id/tvImageColor"
+        android:layout_below="@+id/tvImageSize"
+        android:layout_alignLeft="@+id/tvHeading"
+        android:layout_marginTop="10dp" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spImageColor"
+        android:layout_below="@id/spImageSize"
+        android:layout_toRightOf="@+id/tvImageColor"
+        android:layout_toEndOf="@+id/tvImageColor"
+        android:layout_alignTop="@id/tvImageColor"
+        android:layout_alignRight="@+id/spImageSize"
+        android:layout_alignLeft="@+id/spImageSize"
+        android:spinnerMode="dropdown"
+        android:entries="@array/ImageColorOptions" />
+
+    <!-- *****************
+      *** Image Type ***
+      ****************** -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image Type"
+        android:id="@+id/tvImageType"
+        android:layout_below="@+id/tvImageColor"
+        android:layout_alignLeft="@+id/tvHeading"
+        android:layout_marginTop="10dp" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spImageType"
+        android:layout_below="@+id/spImageColor"
+        android:layout_toRightOf="@+id/tvImageType"
+        android:layout_toEndOf="@+id/tvImageType"
+        android:layout_alignTop="@id/tvImageType"
+        android:layout_alignRight="@+id/spImageSize"
+        android:layout_alignLeft="@+id/spImageSize"
+        android:spinnerMode="dropdown"
+        android:entries="@array/ImageTypeOptions" />
+    <!-- *****************
+      *** Site Filter ***
+      ****************** -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Site Filter"
+        android:id="@+id/tvImageSite"
+        android:layout_below="@+id/tvImageType"
+        android:layout_alignLeft="@+id/tvHeading"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etImageSite"
+        android:layout_below="@+id/spImageType"
+        android:layout_toRightOf="@+id/tvImageSite"
+        android:layout_toEndOf="@+id/tvImageSite"
+        android:layout_alignRight="@+id/spImageSize"
+        android:layout_alignLeft="@+id/spImageSize" />
+
+    <!-- *****************
+      *** Save ***
+      ****************** -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/btnSave"
+        android:layout_below="@+id/tvImageSite"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:onClick="onSettingsSave"/>
+</RelativeLayout>
